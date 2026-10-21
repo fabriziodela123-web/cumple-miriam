@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF6F7">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fabriziodela123-web.github.io/cumple-miriam/">
+<meta property="og:title" content="Estás invitado a los 50 años de Miriam">
+<meta property="og:description" content="Sábado 21 de noviembre de 2026, Ayacucho. 11:00 a. m. San Francisco de Paula · 1:00 p. m. Casa Campo Rosa Toro. Vestimenta elegante.">
+<meta property="og:image" content="https://fabriziodela123-web.github.io/cumple-miriam/og.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="315">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Los 50 de Miriam</title>
+<meta name="description" content="Estás invitado a celebrar los 50 años de Miriam Gutiérrez Vivanco. Sábado 21 de noviembre de 2026, Ayacucho. 11:00 a. m. San Francisco de Paula · 1:00 p. m. Casa Campo Rosa Toro. Vestimenta elegante.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: una tarjeta vertical para el celular. Un lirio rosa se abre al cargar (el momento sorpresa),
+   el "50" como pieza central, su retrato en un arco de portada colonial, el itinerario como línea de tiempo
+   y, al final, una galería de recuerdos.
+   Paleta: blanco de piedra de Huamanga, rosa de lirio, carmín de cochinilla, verde de hoja, oro de retablo. */
+:root {
+  --piedra: #FBF6F7;
+  --papel: #FFFFFF;
+  --piedra-2: #F6EAEE;
+  --lirio: #E5487D;
+  --lirio-claro: #F7B3CB;
+  --cochinilla: #A3123A;
+  --cochinilla-osc: #6E0B27;
+  --hoja: #2F5D46;
+  --oro: #B88A2E;
+  --tinta: #2A1A1E;
+  --tinta-suave: #6B5458;
+  --borde: #EEDDE3;
+
+  --f-display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --f-body: "Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--piedra);
+  background-image: radial-gradient(120% 60% at 50% 0%, #FCE9F0 0%, var(--piedra) 60%);
+  color: var(--tinta);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 40px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tarjeta {
+  max-width: 440px;
+  margin: 0 auto;
+  background: var(--papel);
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(110, 11, 39, 0.05), 0 22px 48px -28px rgba(110, 11, 39, 0.4);
+}
+.tarjeta::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid color-mix(in srgb, var(--oro) 45%, transparent);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ——— El lirio ——— */
+.lirio {
+  display: block;
+  width: min(230px, 64%);
+  height: auto;
+  margin: 18px auto -6px;
+  overflow: visible;
+}
+.petalo, .estambres, .hojas {
+  transform-box: fill-box;
+}
+.petalo {
+  transform-origin: 50% 100%;
+  animation: abre 1300ms var(--ease-out) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes abre {
+  from { transform: scale(0.18) rotate(-14deg); opacity: 0; }
+  40%  { opacity: 1; }
+  to   { transform: none; opacity: 1; }
+}
+.estambres {
+  transform-origin: 50% 100%;
+  animation: brota 700ms var(--ease-out) both;
+  animation-delay: 900ms;
+}
+@keyframes brota {
+  from { transform: scale(0.4); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+.hojas {
+  transform-origin: 50% 0%;
+  animation: brota 900ms var(--ease-out) both;
+}
+.boton-lirio {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: mece 5.5s var(--ease-in-out) 1.4s infinite alternate;
+}
+@keyframes mece { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+
+/* ——— Contenido ——— */
+.cuerpo {
+  position: relative;
+  z-index: 1;
+  padding: 0 32px 36px;
+  display: grid;
+  gap: 30px;
+  text-align: center;
+}
+
+.encabezado { display: grid; gap: 6px; justify-items: center; }
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cochinilla);
+  margin: 0;
+}
+
+.cincuenta {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(120px, 42vw, 168px);
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+  margin: 6px 0 0;
+  font-variation-settings: "opsz" 96;
+  color: var(--cochinilla);
+  background: linear-gradient(170deg, var(--lirio-claro) -10%, var(--lirio) 35%, var(--cochinilla) 75%, var(--cochinilla-osc) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 0.08em 0.04em;
+}
+
+.anos {
+  font-family: var(--f-display);
+  font-size: 15px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  margin: 2px 0 0;
+}
+
+.nombre {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: clamp(30px, 8.6vw, 38px);
+  line-height: 1.1;
+  margin: 16px 0 0;
+  text-wrap: balance;
+  color: var(--tinta);
+  font-variation-settings: "opsz" 48;
+}
+.nombre em { display: block; font-style: italic; color: var(--cochinilla); }
+
+/* ——— Retrato en arco ——— */
+.retrato {
+  margin: 0 auto;
+  width: 82%;
+  display: grid;
+  gap: 12px;
+}
+.arco {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  max-width: 100%;
+  border-radius: 999px 999px 6px 6px;
+  overflow: hidden;
+  background: var(--piedra-2);
+  outline: 1px solid color-mix(in srgb, var(--oro) 55%, transparent);
+  outline-offset: 6px;
+}
+.arco img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 35%;
+  display: block;
+}
+.mensaje {
+  max-width: 32ch;
+  margin: 0 auto;
+  color: var(--tinta-suave);
+  text-wrap: pretty;
+}
+
+.separador { display: flex; align-items: center; gap: 10px; }
+.separador::before, .separador::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: color-mix(in srgb, var(--oro) 40%, transparent);
+}
+.separador svg { width: 22px; height: 22px; flex: none; }
+
+/* ——— Datos ——— */
+.datos { display: grid; gap: 26px; text-align: center; }
+.dato { display: grid; gap: 6px; }
+.etiqueta {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+.dato .valor {
+  font-family: var(--f-display);
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--tinta);
+  text-wrap: balance;
+}
+.dato .detalle { font-size: 14px; color: var(--tinta-suave); }
+
+.fecha-grande {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-family: var(--f-display);
+}
+.fecha-grande .lado {
+  font: 500 13px/1.2 var(--f-body);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  padding-block: 6px;
+  border-block: 1px solid color-mix(in srgb, var(--oro) 50%, transparent);
+  min-width: 84px;
+}
+.fecha-grande .dia {
+  font-size: 56px;
+  line-height: 1;
+  font-style: italic;
+  color: var(--cochinilla);
+  font-variant-numeric: lining-nums;
+}
+
+/* ——— Itinerario ——— */
+.itinerario {
+  list-style: none;
+  margin: 6px auto 0;
+  padding: 0;
+  display: grid;
+  text-align: left;
+  width: 100%;
+  max-width: 320px;
+}
+.itinerario li {
+  display: grid;
+  grid-template-columns: 74px 14px minmax(0, 1fr);
+  column-gap: 14px;
+  position: relative;
+  padding-bottom: 22px;
+}
+.itinerario li:last-child { padding-bottom: 0; }
+.itinerario li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: calc(74px + 14px + 6px);
+  top: 18px;
+  bottom: 2px;
+  width: 1px;
+  background: color-mix(in srgb, var(--oro) 55%, transparent);
+}
+.hora-it {
+  font-family: var(--f-display);
+  font-size: 22px;
+  line-height: 1.1;
+  color: var(--cochinilla);
+  text-align: right;
+  font-variant-numeric: lining-nums;
+}
+.hora-it small {
+  display: block;
+  font-family: var(--f-body);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--tinta-suave);
+}
+.punto {
+  width: 13px; height: 13px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--papel);
+  border: 2px solid var(--lirio);
+  box-shadow: 0 0 0 3px var(--papel);
+  position: relative;
+  z-index: 1;
+}
+.itinerario li:last-child .punto { background: var(--lirio); }
+.parada { display: grid; gap: 1px; min-width: 0; }
+.parada .que {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+.parada .lugar {
+  font-family: var(--f-display);
+  font-size: 19px;
+  line-height: 1.25;
+  color: var(--tinta);
+  text-wrap: balance;
+}
+.enlace {
+  justify-self: start;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cochinilla);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--cochinilla) 35%, transparent);
+  text-underline-offset: 3px;
+  padding-block: 4px;
+  transition: text-decoration-color 200ms ease;
+}
+.enlace:hover { text-decoration-color: var(--cochinilla); }
+.enlace:focus-visible { outline: 2px solid var(--oro); outline-offset: 2px; border-radius: 2px; }
+
+.vestimenta .valor { font-style: italic; color: var(--cochinilla); font-size: 28px; }
+
+/* ——— Cuenta regresiva ——— */
+.cuenta {
+  background: var(--piedra-2);
+  border-radius: 4px;
+  padding: 16px 12px 14px;
+  display: grid;
+  gap: 10px;
+}
+.reloj { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.reloj div { display: grid; gap: 2px; }
+.reloj b {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--cochinilla);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.reloj small { font-size: 11px; color: var(--tinta-suave); letter-spacing: 0.04em; }
+.hoy { font-family: var(--f-display); font-style: italic; font-size: 24px; color: var(--cochinilla); margin: 0; }
+
+/* ——— Botón ——— */
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font: 600 15px/1.2 var(--f-body);
+  text-decoration: none;
+  background: var(--cochinilla);
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px -8px rgba(110, 11, 39, 0.7);
+  transition: transform 140ms var(--ease-out), background-color 200ms ease;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+.boton svg { width: 18px; height: 18px; flex: none; }
+@media (hover: hover) { .boton:hover { background: var(--cochinilla-osc); } }
+.boton:active { transform: scale(0.97); }
+.boton:focus-visible { outline: 2px solid var(--oro); outline-offset: 3px; }
+
+/* ——— Galería ——— */
+.galeria { display: grid; gap: 14px; }
+.galeria h2 {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.15;
+  margin: 2px 0 0;
+  color: var(--tinta);
+  text-wrap: balance;
+}
+.fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.fotos figure { margin: 0; display: grid; gap: 6px; min-width: 0; }
+.fotos .ancha { grid-column: 1 / -1; }
+.fotos img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--piedra-2);
+}
+.fotos .ancha img { aspect-ratio: 4 / 3; }
+.fotos figcaption {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--tinta-suave);
+}
+
+.cierre {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: 21px;
+  color: var(--tinta);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.pie {
+  max-width: 440px;
+  margin: 16px auto 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--tinta-suave);
+  letter-spacing: 0.04em;
+}
+
+/* ——— Entrada escalonada del texto, después de que abre el lirio ——— */
+.entra {
+  animation: entra 700ms var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 80ms + 500ms);
+}
+@keyframes entra {
+  from { opacity: 0; transform: translateY(10px); filter: blur(4px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+.cincuenta.entra { animation-name: entra-50; animation-duration: 950ms; }
+@keyframes entra-50 {
+  from { opacity: 0; transform: scale(0.94) translateY(6px); filter: blur(8px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entra, .cincuenta.entra, .petalo, .estambres, .hojas, .boton-lirio { animation: none; }
+  .boton, .enlace { transition: none; }
+}
+
+@media (max-width: 380px) {
+  .cuerpo { padding-inline: 24px; }
+  .retrato { width: 90%; }
+  .fecha-grande { gap: 10px; }
+  .fecha-grande .lado { min-width: 72px; font-size: 12px; }
+  .reloj b { font-size: 24px; }
+  .itinerario li { grid-template-columns: 62px 14px minmax(0, 1fr); column-gap: 10px; }
+  .itinerario li:not(:last-child)::before { left: calc(62px + 10px + 6px); }
+  .hora-it { font-size: 19px; }
+}
+</style>
+</head>
+<body>
+
+
+<main class="tarjeta" aria-labelledby="titulo">
+
+  <!-- Lirio rosa que se abre al cargar -->
+  <svg class="lirio" viewBox="0 0 260 210" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="g-petalo" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#A3123A"/>
+        <stop offset="0.35" stop-color="#E5487D"/>
+        <stop offset="0.78" stop-color="#F7B3CB"/>
+        <stop offset="1" stop-color="#FFF5F8"/>
+      </linearGradient>
+      <linearGradient id="g-petalo-atras" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#C02A5C"/>
+        <stop offset="0.45" stop-color="#EE7AA0"/>
+        <stop offset="1" stop-color="#FFF0F5"/>
+      </linearGradient>
+      <radialGradient id="g-garganta">
+        <stop offset="0" stop-color="#EEF3C4"/>
+        <stop offset="1" stop-color="#EEF3C4" stop-opacity="0"/>
+      </radialGradient>
+      <g id="manchas" fill="#7A0C33" opacity=".55">
+        <circle cx="-4" cy="-17" r="1.4"/><circle cx="4" cy="-22" r="1.3"/><circle cx="-2" cy="-28" r="1.2"/>
+        <circle cx="5" cy="-13" r="1.1"/><circle cx="-6" cy="-24" r="1"/><circle cx="2" cy="-33" r=".9"/>
+      </g>
+      <path id="forma" d="M0 0 C 17 -14, 23 -46, 3 -78 Q 0 -84 -3 -78 C -23 -46, -17 -14, 0 0 Z"/>
+    </defs>
+
+    <!-- hojas y tallo -->
+    <g class="hojas">
+      <path d="M130 130 C 128 160, 126 185, 124 210" stroke="#2F5D46" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M128 160 C 100 150, 70 158, 46 178 C 76 176, 104 172, 128 166 Z" fill="#2F5D46"/>
+      <path d="M127 176 C 152 160, 184 160, 210 172 C 182 178, 154 182, 127 182 Z" fill="#3E7258"/>
+    </g>
+
+    <!-- botón de lirio a la derecha, se mece suave -->
+    <g class="boton-lirio">
+      <path d="M198 150 C 202 128, 206 110, 214 96" stroke="#2F5D46" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M214 96 C 205 86, 206 62, 220 46 C 230 62, 228 86, 214 96 Z" fill="url(#g-petalo-atras)"/>
+    </g>
+
+    <g transform="translate(128 102)">
+      <!-- pétalos de atrás -->
+      <g transform="rotate(0)"><use href="#forma" class="petalo" style="--d:0ms" fill="url(#g-petalo-atras)" transform="scale(.94)"/></g>
+      <g transform="rotate(120)"><use href="#forma" class="petalo" style="--d:60ms" fill="url(#g-petalo-atras)" transform="scale(.94)"/></g>
+      <g transform="rotate(240)"><use href="#forma" class="petalo" style="--d:120ms" fill="url(#g-petalo-atras)" transform="scale(.94)"/></g>
+      <!-- pétalos de adelante -->
+      <g transform="rotate(60)">
+        <g class="petalo" style="--d:180ms">
+          <use href="#forma" fill="url(#g-petalo)" stroke="#FFE4EE" stroke-width=".8"/>
+          <path d="M0 -4 L0 -62" stroke="#FFFFFF" stroke-width="1.3" opacity=".55"/>
+          <use href="#manchas"/>
+        </g>
+      </g>
+      <g transform="rotate(180)">
+        <g class="petalo" style="--d:240ms">
+          <use href="#forma" fill="url(#g-petalo)" stroke="#FFE4EE" stroke-width=".8"/>
+          <path d="M0 -4 L0 -62" stroke="#FFFFFF" stroke-width="1.3" opacity=".55"/>
+          <use href="#manchas"/>
+        </g>
+      </g>
+      <g transform="rotate(300)">
+        <g class="petalo" style="--d:300ms">
+          <use href="#forma" fill="url(#g-petalo)" stroke="#FFE4EE" stroke-width=".8"/>
+          <path d="M0 -4 L0 -62" stroke="#FFFFFF" stroke-width="1.3" opacity=".55"/>
+          <use href="#manchas"/>
+        </g>
+      </g>
+      <circle r="16" fill="url(#g-garganta)"/>
+      <!-- estambres -->
+      <g class="estambres">
+        <g stroke="#EDF1D6" stroke-width="1.4" fill="none" stroke-linecap="round">
+          <path d="M0 0 Q -10 -16 -20 -30"/><path d="M0 0 Q 10 -16 20 -30"/>
+          <path d="M0 0 Q -4 -20 -8 -38"/><path d="M0 0 Q 4 -20 8 -38"/>
+          <path d="M0 0 Q -16 -8 -30 -16"/><path d="M0 0 Q 16 -8 30 -16"/>
+          <path d="M0 0 L 0 -42" stroke="#C9DA9A" stroke-width="1.8"/>
+        </g>
+        <g fill="#8A3E17">
+          <ellipse cx="-20" cy="-31" rx="2.4" ry="5" transform="rotate(-35 -20 -31)"/>
+          <ellipse cx="20" cy="-31" rx="2.4" ry="5" transform="rotate(35 20 -31)"/>
+          <ellipse cx="-8" cy="-39" rx="2.4" ry="5" transform="rotate(-12 -8 -39)"/>
+          <ellipse cx="8" cy="-39" rx="2.4" ry="5" transform="rotate(12 8 -39)"/>
+          <ellipse cx="-31" cy="-16" rx="2.4" ry="5" transform="rotate(-62 -31 -16)"/>
+          <ellipse cx="31" cy="-16" rx="2.4" ry="5" transform="rotate(62 31 -16)"/>
+        </g>
+        <circle cx="0" cy="-43" r="3" fill="#7BA05B"/>
+      </g>
+    </g>
+  </svg>
+
+  <div class="cuerpo">
+    <header class="encabezado">
+      <p class="eyebrow entra" style="--i:0">Estás invitado a celebrar</p>
+      <p class="cincuenta entra" style="--i:1" aria-hidden="true">50</p>
+      <p class="anos entra" style="--i:2">años de</p>
+      <h1 class="nombre entra" id="titulo" style="--i:3">
+        <span class="sr">Los 50 años de </span>Miriam
+        <em>Gutiérrez Vivanco</em>
+      </h1>
+    </header>
+
+    <p class="mensaje entra" style="--i:5">Medio siglo de amor, fuerza y alegría. Acompáñanos a festejarla en un día que será inolvidable.</p>
+
+    <div class="separador entra" style="--i:6" aria-hidden="true">
+      <svg viewBox="-24 -24 48 48"><g fill="#E5487D"><path d="M0 0 C 5 -4, 7 -13, 1 -22 Q 0 -24 -1 -22 C -7 -13, -5 -4, 0 0 Z"/><path d="M0 0 C 5 -4, 7 -13, 1 -22 Q 0 -24 -1 -22 C -7 -13, -5 -4, 0 0 Z" transform="rotate(72)"/><path d="M0 0 C 5 -4, 7 -13, 1 -22 Q 0 -24 -1 -22 C -7 -13, -5 -4, 0 0 Z" transform="rotate(144)"/><path d="M0 0 C 5 -4, 7 -13, 1 -22 Q 0 -24 -1 -22 C -7 -13, -5 -4, 0 0 Z" transform="rotate(216)"/><path d="M0 0 C 5 -4, 7 -13, 1 -22 Q 0 -24 -1 -22 C -7 -13, -5 -4, 0 0 Z" transform="rotate(288)"/></g><circle r="3" fill="#B88A2E"/></svg>
+    </div>
+
+    <section class="datos" aria-label="Detalles del evento">
+      <div class="dato entra" style="--i:7">
+        <span class="etiqueta">Cuándo</span>
+        <div class="fecha-grande">
+          <span class="lado">Sábado</span>
+          <span class="dia">21</span>
+          <span class="lado">Nov 2026</span>
+        </div>
+        <span class="detalle">Desde las 11:00 a. m. · Ayacucho</span>
+      </div>
+
+      <div class="dato entra" style="--i:8">
+        <span class="etiqueta">Itinerario</span>
+        <ol class="itinerario">
+          <li>
+            <span class="hora-it">11:00 <small>a. m.</small></span>
+            <span class="punto" aria-hidden="true"></span>
+            <div class="parada">
+              <span class="que">Punto de encuentro</span>
+              <span class="lugar">San Francisco de Paula</span>
+              <a class="enlace" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Iglesia%20San%20Francisco%20de%20Paula%20Ayacucho">Ver en el mapa</a>
+            </div>
+          </li>
+          <li>
+            <span class="hora-it">1:00 <small>p. m.</small></span>
+            <span class="punto" aria-hidden="true"></span>
+            <div class="parada">
+              <span class="que">Celebración</span>
+              <span class="lugar">Casa Campo Rosa Toro</span>
+              <a class="enlace" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Casa%20Campo%20Rosa%20Toro%20Ayacucho">Ver en el mapa</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="dato vestimenta entra" style="--i:9">
+        <span class="etiqueta">Código de vestimenta</span>
+        <span class="valor">Elegante</span>
+      </div>
+    </section>
+
+    <section class="cuenta entra" style="--i:10" aria-live="polite">
+      <span class="etiqueta">Faltan</span>
+      <div class="reloj" id="reloj">
+        <div><b id="d">--</b><small>días</small></div>
+        <div><b id="h">--</b><small>horas</small></div>
+        <div><b id="m">--</b><small>minutos</small></div>
+        <div><b id="s">--</b><small>segundos</small></div>
+      </div>
+      <p class="hoy" id="hoy" hidden>¡Hoy es el gran día!</p>
+    </section>
+
+    <a class="boton entra" style="--i:11" target="_blank" rel="noopener"
+       href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=50%20a%C3%B1os%20de%20Miriam%20Guti%C3%A9rrez%20Vivanco&amp;dates=20261121%2F20261122&amp;location=Casa%20Campo%20Rosa%20Toro%2C%20Ayacucho&amp;details=11%3A00%20a.%20m.%20Punto%20de%20encuentro%3A%20San%20Francisco%20de%20Paula.%0A1%3A00%20p.%20m.%20Celebraci%C3%B3n%20en%20Casa%20Campo%20Rosa%20Toro.%0AVestimenta%3A%20elegante.">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+      Agregar a mi calendario
+    </a>
+
+    <p class="cierre">¡Te esperamos para celebrarla con mucho cariño!</p>
+  </div>
+</main>
+
+<p class="pie">Ayacucho · 21 · XI · 2026</p>
+
+<script>
+(function () {
+  // 11:00 a. m. del 21 de noviembre de 2026, hora de Perú (UTC-5)
+  var objetivo = new Date("2026-11-21T11:00:00-05:00").getTime();
+  var finDia = new Date("2026-11-22T00:00:00-05:00").getTime();
+  var el = {
+    d: document.getElementById("d"),
+    h: document.getElementById("h"),
+    m: document.getElementById("m"),
+    s: document.getElementById("s"),
+    reloj: document.getElementById("reloj"),
+    hoy: document.getElementById("hoy")
+  };
+  function dos(n) { return n < 10 ? "0" + n : String(n); }
+  function tick() {
+    var ahora = Date.now();
+    var resta = objetivo - ahora;
+    if (resta <= 0) {
+      el.reloj.hidden = true;
+      el.hoy.hidden = false;
+      if (ahora >= finDia) el.hoy.textContent = "¡Gracias por celebrar con nosotros!";
+      return;
+    }
+    var seg = Math.floor(resta / 1000);
+    el.d.textContent = Math.floor(seg / 86400);
+    el.h.textContent = dos(Math.floor(seg % 86400 / 3600));
+    el.m.textContent = dos(Math.floor(seg % 3600 / 60));
+    el.s.textContent = dos(seg % 60);
+    setTimeout(tick, 1000 - (ahora % 1000));
+  }
+  tick();
+})();
+</script>
+
+</body>
+</html>
